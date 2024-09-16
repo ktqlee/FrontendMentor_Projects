@@ -1,36 +1,36 @@
 # Mortgage repayment calculator
 
-![Screenshot of the calculator](/readme_img/calculator_screenshot.png)
+![Screenshot of the calculator](readme_img/calculator_screenshot.png)
 
 ## Overview
 
 This is a solution to the [Mortgage repayment calculator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/mortgage-repayment-calculator-Galx1LXK73). In this project, HTML, CSS and JavaScript is used.
 
-- Live Site URL: [Mortgage repayment calculator](https://ktqlee.github.io/frontendmentor_mortgage_repayment_calculator/)
+- Live Site URL: [Mortgage repayment calculator](https://ktqlee.github.io/FrontendMentor_Projects/4_mortgage_repayment_calculator/index.html)
 
 ### Features
 
 **1. Outputing information about monthly repayment and total repayment amounts**
 
-  ![Input Formatting](/readme_img/output_payment.png)
+  ![Input Formatting](readme_img/output_payment.png)
    
 **2. Providing form validation messages if any field is incomplete**
 
-  ![Input Formatting](/readme_img/form_validation.png)
+  ![Input Formatting](readme_img/form_validation.png)
 
 **3. Adjusting layout depending on device's screen size**
 
-  ![Input Formatting](/readme_img/mobile_layout.png)
+  ![Input Formatting](readme_img/mobile_layout.png)
 
 **4. Providing hover and focus states for interactive elements**
 
-  ![Input Formatting](/readme_img/hover.png)
+  ![Input Formatting](readme_img/hover.png)
 
 **5. Number Formatting**
 
   - Input formatting (Mortgage Amount) using Cleave library
 
-    ![Input Formatting](/readme_img/number_formatting_1.png)
+    ![Input Formatting](readme_img/number_formatting_1.png)
     
     ```html
     <input class="cleave_format_digit" id="mortgage_amount" type="text">
