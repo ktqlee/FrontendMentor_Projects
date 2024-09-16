@@ -1,0 +1,164 @@
+body{
+    background-color: hsl(27, 66%, 92%);
+    height: 100vh;
+    margin: 0;
+    font-family: "DM Sans", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer{
+    /* box-sizing: content-box; */
+    width: 450px;
+    min-width: 300px;
+}
+
+/* Balance Container */
+.balanceContainer{
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 20px;
+    padding: 15px 25px;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+/* My balance */
+.myBalanceTitle{
+    margin: 0;
+    font-size: 0.8rem;
+    color: hsl(33, 100%, 98%, 0.85);
+}
+.balance{
+    margin: 6px 0 0 0;
+    font-size: 1.5rem;
+}
+.balanceContainer img{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 40px;
+    width: auto;
+}
+
+
+/* Content Container */
+.contentContainer{
+    margin-top: 20px;
+    background-color: hsl(33, 100%, 98%);
+    border-radius: 20px;
+    padding: 15px 25px;
+}
+.contentContainer h1{
+    margin: 10px 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Chart Container */
+/* width = 400px */
+.chartContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 200px;
+}
+.barContainer{
+    width: 42px;
+}
+.daySpending{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 52px;
+    padding: 5px 2px;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 5px;
+    /* right = (width_barContainer -  width_daySpending)/2 */
+    right: 5px;
+    position: relative;
+    z-index: 1;
+
+    visibility: hidden;
+}
+.bar{
+    background-color: hsl(10, 79%, 65%);
+    border-radius: 5px;
+    height: 130px;
+}
+.bar:hover{
+    cursor: pointer;
+    background-color: hsla(10, 79%, 65%, 0.8);
+}
+/* For max spending in the week */
+.bar.today{
+    background-color: hsl(186, 34%, 60%);
+}
+.bar.today:hover{
+    background-color: hsl(186, 34%, 60%, 0.8);
+}
+.dayOfWeek{
+    color: hsla(0, 0%, 35%, 0.9);
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Total Figure Container */
+.totalFigureContainer{
+    border-top: 1px solid hsla(0, 0%, 70%, 0.35);
+    padding: 20px 0;
+}
+.totalThisMonthTitle{
+    color: hsla(0, 0%, 35%, 0.9);
+    margin: 0;
+}
+.twoCol{
+    display: flex;
+    justify-content: space-between;
+}
+#totalSpendingThisMonth{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.percentageChangeContainer p{
+    margin: 0;
+}
+#percentageChangeInSpending{
+    font-weight: bold;
+    margin: 0;
+    text-align: end;
+}
+
+@media screen and (max-width: 500px){
+
+    .mainContainer{
+        width: 90vw;
+    }
+    .barContainer{
+        width: 35px;
+    }
+    .daySpending{
+        width: 45px;
+        font-size: 0.7rem;
+    }
+    .bar{
+        width: 35px;
+    }
+
+}
+@media screen and (max-width: 380px){
+
+    .barContainer{
+        width: 28px;
+    }
+    .daySpending{
+        width: 38px;
+        font-size: 0.6rem;
+    }
+    .bar{
+        width: 28px;
+    }
+
+}

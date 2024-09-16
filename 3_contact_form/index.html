@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <form method="post" id="form"> <!-- onsubmit="return validateform(event)" -->
+    <h1>Contact Us</h1>
+
+    <!-- name -->
+    <div class="two_col_row">
+
+      <!-- first name -->
+      <div class="form_row name first_col">
+        <label for="firstname">
+
+          <p>First Name <span class="required_char">*</span></p>
+          <input id="firstname" class="" name="firstname" type="text">
+
+        </label>
+        <p class="error" id="firstnameerror"></p>
+      </div>
+
+      <!-- last name -->
+      <div class="form_row name second_col">
+        <label for="lastname">
+
+          <p>Last Name <span class="required_char">*</span></p>
+          <input id="lastname" class="" name="lastname" type="text">
+
+        </label>
+        <p class="error" id="lastnameerror"></p>
+      </div>
+
+    </div>
+
+    <!-- email -->
+    <div class="form_row">
+      <label for="email">
+
+        <p>Email Address <span class="required_char">*</span></p>
+        <input id="email" class="" name="email" type="text">
+
+      </label>
+      <p class="error" id="emailerror"></p>
+    </div>
+
+
+    <!-- Query Type -->
+    <div class="form_row query"> 
+      <p>Query Type <span class="required_char">*</span></p>
+
+      <div class="two_col_row query_container">
+
+        
+        <label for="general_enquiry" class="enquiry first_col">
+
+          <input id="general_enquiry" name="QueryType" value="General Enquiry" class="queryinput" type="radio">
+          <p class="enquiry_text">General Enquiry</p>
+
+        </label>
+
+        <label for="support_request" class="enquiry enquiry_second_col">
+
+          <input id="support_request" name="QueryType" value="Support Request" class="queryinput" type="radio">
+          <p class="enquiry_text">Support Request</p>
+
+        </label>
+
+      </div>
+
+      <p class="error" id="queryerror"></p>
+    </div>
+    
+
+    <!-- message -->
+    <div class="form_row"> 
+      <label for="message">
+
+        <p>Message <span class="required_char">*</span></p>
+        <textarea id="message" class="" name="message"></textarea>
+
+      </label>
+      <p class="error" id="messageerror"></p>
+    </div>
+
+
+    <!-- consent -->
+    <div class="form_row consent_div"> 
+      <label for="consent" class="consent_label">
+
+        <input id="consent" name="consent" type="checkbox" class="consentinput">
+        <p class="p_consent">I consent to being contacted by the team <span class="required_char">*</span></p>
+
+      </label>
+      <p class="error last_error" id="consenterror"></p>
+    </div>
+
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="toast" id="toast"><p class="toastmessage" id="toastmessage"></p></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+<!-- Message Sent!
+Thanks for completing the form. We'll be in touch soon! -->

@@ -1,0 +1,223 @@
+body{
+    background-color: hsl(148, 38%, 91%);
+    font-size: 16px;
+    font-weight: 400, 700;
+    font-family: Karla, serif;
+
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    background-color: white;
+    border-radius: 20px;
+
+    margin: auto;
+    max-width: 600px;
+    min-width: 280px;
+    padding: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1{
+    width: 100%;
+    margin: 0;
+    color: hsl(169, 78%, 17%);
+}
+
+.form_row{
+    width: 100%;
+    margin-top: 15px;
+}
+.form_row  p{
+    margin-bottom: 0px;
+}
+
+/* For first name & last name, query */
+.two_col_row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.first_col, .second_col, .enquiry_second_col{
+    display: inline-block;
+    width: 49%;
+}
+.second_col{
+    padding-left: 3%;
+}
+
+
+/* For first name & last name */
+.form_row.name input{
+    width: 100%;
+} 
+
+.required_char{
+    color: hsl(169, 82%, 27%);
+}
+
+input{
+    border: 1px solid hsl(169, 82%, 27%);
+    border-radius: 6px;
+    box-sizing: border-box;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+
+    margin: 0;
+    margin-top: 8px;
+
+    /* Align radio/checkbox input with text */
+    vertical-align: middle;
+}
+input:focus{
+    background-color: hsl(160, 77%, 78%);
+}
+
+/* input for email */
+#email{ 
+    width: 100%;
+}
+
+label > p{
+    display: inline-block;
+}
+
+/* query type */
+.query{
+    margin-top: 0;
+}
+.query_container{
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+}
+.enquiry{
+    border: 1px solid hsl(169, 82%, 27%);
+    border-radius: 6px;
+    display: inline-block;
+    width: 48%;
+}
+.enquiry:hover{
+    cursor: pointer;
+}
+.queryinput{
+    margin: 0 10px;
+}
+
+/* message */
+textarea{
+    width: 100%;
+    height: 8rem;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 1px solid hsl(169, 82%, 27%);
+    border-radius: 6px;
+    margin-top: 8px;
+}
+textarea:focus{
+    background-color: hsl(160, 77%, 78%);
+}
+
+/* consent */
+.consent_label{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.consentinput{
+    vertical-align: middle;
+}
+.p_consent{
+    /* display: inline-block; */
+    margin-left: 10px;
+}
+
+/* error message */
+.error{
+    color: hsl(0, 66%, 54%);
+    margin-top: 10px;
+}
+.last_error{
+    margin-top: 0;
+}
+.error_border{
+    border: 1px solid hsl(0, 66%, 54%);
+}
+
+button{
+    width: 100%;
+    color: white;
+    background-color: hsl(169, 82%, 27%);
+    border: 0;
+    border-radius: 5px;
+    height: 2.5rem;
+    margin-top: 15px;
+    font-family: karla;
+    font-size: 17px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.toast{
+    display: inline-block;
+    width: 300px;
+    height: 3rem;
+    background-color: hsl(129, 72%, 81%);
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+    /* border-radius: 5px; */
+
+    position: fixed;
+    top: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+}
+.appear_animation{
+    animation-name: appear;
+    animation-duration: 1s;
+}
+@keyframes appear{
+    from {
+        top: -30px;
+    }
+}
+
+/* For mobile */
+@media screen and (max-width: 600px) {
+    body{
+        padding: 5%;
+        height: 100%;
+    }
+
+    .two_col_row{
+        flex-wrap: wrap;
+    }
+    .first_col, .second_col, .enquiry_second_col{
+        width: 100%;
+    }
+    .second_col{
+        padding-left: 0;
+    }
+
+    /* Query Type */
+    .enquiry_second_col{
+        margin-top: 15px;
+    }
+
+    /* message */
+    textarea{
+        height: 12rem
+    }
+}

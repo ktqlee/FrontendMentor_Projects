@@ -1,0 +1,74 @@
+body{
+    height: 100vh;
+    box-sizing: border-box;
+
+    /* Align to center of the page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: hsl(47, 88%, 63%);
+    font-size: 16px;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500, 800;
+}
+article{
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid hsl(0, 0%, 7%);
+    box-shadow: 8px 8px hsl(0, 0%, 7%);
+
+    padding: 1.5rem;
+    width: 285px;
+    height: 450px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+article:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 8px 8px hsl(232, 66%, 33%);
+    border: 2px solid hsl(232, 66%, 33%);
+    transition-duration: 0.6s;
+}
+
+.thumbnail{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.tag{
+    display: block;
+    width:  100%;
+    margin: 1.5rem 0;
+}
+.tag span{
+    background-color: hsl(47, 88%, 63%);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.date{
+    font-size: 13px;
+}
+
+
+.description{
+    margin-top: 0;
+    color: hsl(0, 0%, 50%);
+}
+
+.author{
+    display: flex;
+    justify-content: flex-start;
+}
+.author_icon{
+    width: 25px;
+    object-fit: contain;
+}
+.author .name{
+    box-sizing: border-box;
+    margin-left: 0.8rem;
+}

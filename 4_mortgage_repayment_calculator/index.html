@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- Cleave Library for input formatting-->
+  <script src=" https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js "></script>
+</head>
+<body id="body">
+
+  
+  <div class="calculator_box" id="calculator_box">
+    <form id="form">
+
+      <div class="form_top_row">
+        <h1 class="mortgage_calculator_heading">Mortgage Calculator</h1>   
+        <span id="clear_all_button">Clear All</span>
+      </div>
+
+      <div class="input_container">
+        <p class="input_col_p">Mortgage Amount</p>
+
+        <label for="mortgage_amount">
+          <span class="input_tag input_tag_type1">£</span>
+          <input class="cleave_format_digit" id="mortgage_amount" type="text">
+        </label>
+        
+        <p class="error_message" id="mortgage_amount_error"></p>
+      </div>
+      
+      <div class="input_container">
+
+        <div class="input_sub_item">
+          <p class="input_col_p">Mortgage Term</p>
+
+          <label for="mortgage_term">
+            <input id="mortgage_term" type="number" min="0">
+            <span class="input_tag" id="years_input_tag">years</span>
+          </label>
+
+          <p class="error_message" id="mortgage_term_error"></p>
+        </div>
+        
+        <div class="seperate_div"></div>
+
+        <div class="input_sub_item">
+          <p class="input_col_p">Interest Rate</p>
+
+          <label for="interest_rate">
+            <input id="interest_rate" type="number" step="0.01" min="0">
+            <span class="input_tag">%</span>
+          </label>
+
+          <p class="error_message" id="interest_rate_error"></p>
+        </div>
+
+      </div>
+
+      <div class="input_container">
+        <p class="input_col_p">Mortgage Type</p>
+
+        <label for="mortgage_type_repayment" id="mortg_type_repayment_label" class="mortg_type_label">
+          <input id="mortgage_type_repayment" class="radio_input" type="radio" name="mortgage_type" value="repayment">
+          <span class="mortgage_type_span">Repayment</span>
+        </label>
+
+        <label for="mortgage_type_interest_only" id="mortgage_type_interest_label" class="mortg_type_label">
+          <input id="mortgage_type_interest_only" class="radio_input" type="radio" name="mortgage_type" value="interest only">
+          <span class="mortgage_type_span">Interest Only</span>
+        </label>
+
+        <p class="error_message" id="mortgage_type_error"></p>
+      </div>
+
+      <button id="calculate_button" type="submit">
+        <img src="assets/images/icon-calculator.svg" alt="Calculator Icon">
+        <span>Calculate Repayments</span>
+      </button>
+
+    </form>
+  </div>
+
+  <div class="result_box" id="result_box">
+
+    <!-- Empty results  -->
+    <div class="empty_result">
+      <img src="assets/images/illustration-empty.svg" alt="Calculator Icon" id="result_cal_icon">
+      <h1>Results shown here</h1>
+      <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+    </div>
+
+    <!-- Completed results -->
+    <div class="completed_result">
+      <h1>Your results</h1>
+      <p id="result_description">Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.</p>
+
+      <div class="cost_container">
+
+        <p>Your monthly repayments</p>
+        <p id="monthly_repayment">£1,797.74</p>
+        <hr class="cost_container_linebreak">
+        <p>Total you'll repay over the term</p>
+        <p id="total_repayment">£539,332.94</p>
+
+      </div>
+      <div class="empty_div"></div> <!-- For layout -->
+    </div>
+
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+</html>
