@@ -10,7 +10,7 @@ In this project, HTML, CSS and JavaScript are used.
 
 The website will read the data.json file, which include the amount of expenses in the last 7 days, and generate a bar chart based on the amount. Additional JavaScript library such as Chart.js is not used in this project.
 
-- Live Site URL: [Expenses Chart Component](https://ktqlee.github.io/frontendmentor_expenseschartcomponent/)
+- Live Site URL: [Expenses Chart Component](https://ktqlee.github.io/FrontendMentor_Projects/5_expenseschartcomponent/index.html)
 
 ### Features
 
