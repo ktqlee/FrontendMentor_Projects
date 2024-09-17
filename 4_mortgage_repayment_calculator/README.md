@@ -58,4 +58,4 @@ This is a solution to the [Mortgage repayment calculator challenge on Frontend M
 
 **6. Clear All button**
 
-https://github.com/user-attachments/assets/31891bb2-dd8e-4036-a217-9417ff97a7c1
+https://github.com/user-attachments/assets/a65fac6e-186c-4540-86db-9bcbedfcd47c
